@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ReconForge Report - www.eccouncil.org</title>
+<style>
+  :root {
+    --bg: #0b0f14; --card: #131a22; --accent: #4fd1c5; --text: #e6edf3;
+    --muted: #8b98a5; --border: #1f2a35; --err: #ff6b6b; --open: #4fd1c5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Segoe UI', Consolas, monospace;
+    margin: 0; padding: 0 0 60px 0;
+  }
+  header {
+    background: linear-gradient(135deg, #0d1b2a, #122a3a);
+    padding: 32px 40px; border-bottom: 2px solid var(--accent);
+  }
+  header h1 { margin: 0 0 6px 0; font-size: 26px; color: var(--accent); }
+  header p { margin: 2px 0; color: var(--muted); font-size: 14px; }
+  .container { max-width: 980px; margin: 30px auto; padding: 0 20px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;
+  }
+  .card h2 {
+    margin-top: 0; color: var(--accent); font-size: 18px;
+    border-bottom: 1px solid var(--border); padding-bottom: 8px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  td, th { padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  td.k { color: var(--accent); width: 220px; font-weight: 600; }
+  td.open { color: var(--open); font-weight: 600; }
+  .muted { color: var(--muted); font-style: italic; }
+  .err { color: var(--err); }
+  pre { white-space: pre-wrap; word-break: break-word; margin: 0; font-size: 12.5px; color: #c8d3dc; }
+  ul.subdomain-list { columns: 2; -webkit-columns: 2; font-size: 13.5px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>ReconForge — Reconnaissance Report</h1>
+  <p>Target: <b>www.eccouncil.org</b></p>
+  <p>Generated (UTC): 2026-07-01T08:46:51.168092+00:00</p>
+  <p>Resolved IP: 104.18.9.180</p>
+</header>
+<div class="container">
+  <div class='card'><h2>WHOIS Lookup</h2><pre>Malformed request.
+&gt;&gt;&gt; Last update of WHOIS database: 2026-07-01T08:46:54Z &lt;&lt;&lt;
+
+Terms of Use: Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient&#x27;s own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Identity Digital except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.  The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+</pre></div><div class='card'><h2>DNS Enumeration</h2><table><tr><td class='k'>A</td><td>104.18.9.180</td></tr></table></div><div class='card'><h2>Subdomain Enumeration</h2><p>Total unique subdomains found: <b>1</b></p><ul class='subdomain-list'><li>www.eccouncil.org</li></ul></div><div class='card'><h2>Port Scan</h2><p>Target IP: <b>104.18.9.180</b> &nbsp;|&nbsp; Range: 1-1024 &nbsp;|&nbsp; Started: 2026-07-01T08:47:32.095619+00:00 &nbsp;|&nbsp; Finished: 2026-07-01T08:47:43.273150+00:00</p><table><tr><th>Port</th><th>State</th><th>Service</th></tr><tr><td>80/tcp</td><td class='open'>open</td><td>HTTP</td></tr><tr><td>443/tcp</td><td class='open'>open</td><td>HTTPS</td></tr></table></div><div class='card'><h2>Banner Grabbing</h2><table><tr><td class='k'>Port 80</td><td><pre>HTTP/1.1 301 Moved Permanently
+Date: Wed, 01 Jul 2026 08:47:44 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: close
+Server-Timing: cfEdge;dur=71,cfOrigin;dur=0
+Location: https://www.eccouncil.org/
+X-Content-Type-Options: nosniff
+set-cookie: __cf_bm=qTdSVF19qapZain43G4knsjrIYGInUcG7Pjs</pre></td></tr><tr><td class='k'>Port 443</td><td><pre>(no banner / connection closed silently)</pre></td></tr></table></div><div class='card'><h2>Technology Detection</h2><p>Scheme: https &nbsp;|&nbsp; HTTP Status: 200</p><ul><li>Cloudflare</li><li>Server header: cloudflare</li><li>WordPress</li></ul></div>
+</div>
+<footer>Generated by ReconForge v1.0 — ITsolera Offensive Security Internship Task 1</footer>
+</body>
+</html>
